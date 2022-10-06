@@ -40,6 +40,7 @@ ubuntu@ip-172-31-25-151:~$ docker pull httpd:2.4
 check docker image
 
 ubuntu@ip-172-31-25-151:~$ docker images
+
 REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
 httpd        2.4       d16a51d08814   30 hours ago   145MB
 
