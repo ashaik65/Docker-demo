@@ -41,10 +41,10 @@ check docker image
 
 ubuntu@ip-172-31-25-151:~$ docker images
 
-REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
-httpd        2.4       d16a51d08814   30 hours ago   145MB
+       REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+       httpd        2.4       d16a51d08814   30 hours ago   145MB
 
 ubuntu@ip-172-31-25-151:~$ docker run --name httpd -p 8080:80 -d httpd:2.4
-0f87d2b940d28e2d6bae9d28834d7e4ae492f6a5cd5925ad9306ebb1da924697
+
 
 
