@@ -1,3 +1,6 @@
+
+         ################## Initializing the Docker Environment #####################
+
 We can do this task on ubuntu machine and do practice of all aspects of docker 
 
 Steps To proceed:-
@@ -35,6 +38,9 @@ Review the How to use this image section.
 
 Pull the httpd image and try to run 
 
+       ########################## Working With Prebuilt Docker Images #########################
+
+
 ubuntu@ip-172-31-25-151:~$ docker pull httpd:2.4
 
 check docker image
@@ -46,5 +52,30 @@ ubuntu@ip-172-31-25-151:~$ docker images
 
 ubuntu@ip-172-31-25-151:~$ docker run --name httpd -p 8080:80 -d httpd:2.4
 
+Once this done check in browser using <public-ip:8080> ------> you will see defualt page of httpd
 
+Now this page is look boaring to us now will custmoise the page now for that follow the steps
+
+https://github.com/ashaik65/Docker-demo.git ------> Clone the git repo
+
+now go to web folder and fire ls -al command you can see the resources 
+
+ubuntu@ip-172-31-25-151:~$ docker run -name httpd-new -p 8082:80 -v ($pwd)/web:/usr/local/apache2/htdocs:ro -d httpd:2.4   
+
+Once this done check in browser using <public-ip:8082> ------> you will see now our custome page will be shown
+
+Now will do same thing but on different webserver we can try with nginx
+
+ubuntu@ip-172-31-25-151:~$  docker pull nginx
+
+ubuntu@ip-172-31-25-151:~$ docker run --name nginx -p 8081:80 -d nginx
+
+Once this done check in browser using <public-ip:8081> ------> you can see default nginx page
+
+Now this page is look boaring to us now will custmoise the page now for that follow the steps
+
+ubuntu@ip-172-31-25-151:~$ docker run --name nginx-new -v  ($pwd)/web:/usr/share/nginx/html:ro -p 8083:80 -d nginx
+
+
+Once this done check in browser using <public-ip:8083> ------> you can see customise nginx page
 
